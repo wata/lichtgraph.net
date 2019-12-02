@@ -1,0 +1,3 @@
+# リヒトグラフ
+
+https://lichtgraph.net

@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="ja-JP">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="リヒトグラフは映像編集の会社です。
+  企業の販促映像やTV-CM、Web-CMなどを作っています。
+  モーショングラフィックスという、イラストや文字をアニメーションさせる手法で
+  静止画よりわかりやすくて目にとまる広告を作成しています。">
+  <meta name="keywords" content="リヒトグラフ,lichtgraph,映像,movie,動画,video">
+  <title>リヒトグラフ</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+  <meta property="og:image:height" content="292">
+  <meta property="og:image:width" content="559">
+  <meta property="og:image" content="https://lichtgraph.net/assets/og-image.jpg">
+  <meta property="og:url" content="https://lichtgraph.net">
+  <meta property="og:title" content="リヒトグラフ">
+  <meta property="og:description" content="リヒトグラフは映像編集の会社です。企業の販促映像やWeb CMなどを作っています。">
+  <meta property="og:site_name" content="リヒトグラフ">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@lichtgraph">
+  <meta name="twitter:title" content="リヒトグラフ">
+  <meta name="twitter:description" content="リヒトグラフは映像編集の会社です。企業の販促映像やWeb CMなどを作っています。">
+  <meta name="twitter:image" content="https://lichtgraph.net/assets/og-image.jpg">
+  <style>
+    body {
+      font-family: Helvetica , "游ゴシック" , "Yu Gothic" , sans-serif;
+      font-size: 100%;
+      line-height: 1.75;
+      text-align: center;
+      font-feature-settings : "palt";
+      -webkit-font-smoothing: antialiased;
+      -webkit-overflow-scrolling: touch;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.5;
+      margin: 0 0 0.5rem 0;
+    }
+    h1 {
+      font-size: 2.75rem;
+    }
+    h2 {
+      font-size: 1.75rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    h5 {
+      font-size: 0.8rem;
+    }
+    h6 {
+      font-size: 0.6rem;
+    }
+    @media screen and (max-width: 736px) {
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+      h4 {
+        font-size: 0.8rem;
+      }
+      h5 {
+        font-size: 0.6rem;
+      }
+      h6 {
+        font-size: 0.6rem;
+      }
+    }
+    a {
+      color: inherit;
+    }
+    a:hover, a:focus {
+      text-decoration: none;
+      outline: none;
+    }
+    p {
+      margin: 0;
+    }
+    .br {
+      display: block;
+    }
+    @media screen and (max-width: 736px) {
+      .br {
+        display: inline;
+      }
+    }
+
+    .btn {
+      -moz-transition: all 0.4s linear;
+      -o-transition: all 0.4s linear;
+      -webkit-transition: all 0.4s linear;
+      transition: all 0.4s linear;
+    }
+    .btn-lg {
+      font-size: 1rem;
+      border-radius: 30px;
+    }
+    .btn-outline-inverse {
+      background-color: transparent;
+      border: 1px solid #0275d8;
+    }
+    .container-fluid {
+      max-width: 650px;
+    }
+
+
+    .header, .item {
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      -moz-flex-direction: row;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+    }
+    .header-container, .item-container {
+      width: 100%;
+      padding-top: 3.9rem;
+      padding-bottom: 3.9rem;
+      z-index: 1;
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      -moz-flex-direction: column;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -moz-justify-content: center;
+      -webkit-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -ms-flex: 1;
+    }
+    .header::after, .item-content::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAAEFsT2yAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjZGRDBBNzIwMkJERjExRTM5RDc5Q0UxMTkyNkYxRkRCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjZGRDBBNzIxMkJERjExRTM5RDc5Q0UxMTkyNkYxRkRCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NkZEMEE3MUUyQkRGMTFFMzlENzlDRTExOTI2RjFGREIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NkZEMEE3MUYyQkRGMTFFMzlENzlDRTExOTI2RjFGREIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6wWM6yAAAAF0lEQVR42mL4//8/A0AAMQCBL0CAwQkAN2MDmBvZMMsAAAAASUVORK5CYII=);
+      background-repeat: repeat;
+    }
+
+    .header {
+      color: #fff !important;
+      height: 90vh;
+      position: relative;
+      background-image: url(https://i.imgur.com/71WQrqP.jpg);
+      background-position: 50% 50%;
+      background-size: cover;
+    }
+    .header-container h1 {
+      margin: 0 auto 2rem;
+    }
+    .header-container h1 img {
+      width: 350px;
+      height: 147.69px;
+    }
+    .header-container p {
+      font-size: 1.4rem;
+    }
+    @media screen and (max-width: 736px) {
+      .header-container h1 img {
+        width: 300px;
+        height: 126.59px;
+      }
+      .header-container p {
+        font-size: 1.2rem;
+      }
+    }
+
+    .item {
+      min-height: 38vh;
+    }
+    .item-headline {
+      background-color: #fff;
+    }
+    .item-content {
+      color: #fff !important;
+      position: relative;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+    a.item-content .item-container {
+      background-color: rgba(0,0,0,.4);
+      -moz-transition: background-color 0.4s linear;
+      -o-transition: background-color 0.4s linear;
+      -webkit-transition: background-color 0.4s linear;
+      transition: background-color 0.4s linear;
+    }
+    a.item-content:hover .item-container {
+      background-color: rgba(0,0,0,.8);
+    }
+    a.item-content .item-container p {
+      margin-bottom: 1rem;
+    }
+    a.item-content .item-container .fa {
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      border: 1px solid #fff;
+      text-decoration: none;
+      border-radius: 100%;
+      width: 2.475rem;
+      height: 2.475rem;
+      line-height: 2.475rem;
+      text-indent: 2.475rem;
+    }
+    a.item-content .item-container .fa:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      font-size: 1.22rem;
+      line-height: inherit;
+      text-align: center;
+      text-indent: 0;
+    }
+
+    .item-content .list-getintouch,
+    .item-content .table-about {
+      margin: 0;
+    }
+    .item-content .list-getintouch li:not(:last-child) {
+      margin-right: 15px;
+    }
+    .item-content .list-getintouch .fa {
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.5);
+      text-decoration: none;
+      border-radius: 100%;
+      width: 3.75rem;
+      height: 3.75rem;
+      line-height: 3.75rem;
+      text-indent: 3.75rem;
+      -moz-transition: color 0.4s linear, background-color 0.4s linear, border-color 0.4s linear;
+      -o-transition: color 0.4s linear, background-color 0.4s linear, border-color 0.4s linear;
+      -webkit-transition: color 0.4s linear, background-color 0.4s linear, border-color 0.4s linear;
+      transition: color 0.4s linear, background-color 0.4s linear, border-color 0.4s linear;
+    }
+    .item-content .list-getintouch .fa:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      font-size: 1.85rem;
+      line-height: inherit;
+      text-align: center;
+      text-indent: 0;
+    }
+    .item-content .list-getintouch .fa:hover {
+      color: #373a3c;
+      background-color: #fff;
+      border-color: #fff;
+    }
+    .item-content .table-about td,
+    .item-content .table-about th {
+      border: none;
+    }
+    .item-content .table-about th {
+      white-space: nowrap;
+    }
+
+    .footer {
+      padding: 20px 0;
+    }
+    .footer .copyright {
+      margin: 0;
+    }
+
+    #video {
+      height: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      opacity: .5;
+      overflow: hidden;
+      min-width: 320px;
+      display: none;
+    }
+
+    .mfp-fade.mfp-bg {
+      opacity: 0;
+      -webkit-transition: all 0.15s linear;
+      -moz-transition: all 0.15s linear;
+      transition: all 0.15s linear;
+    }
+    .mfp-fade.mfp-bg.mfp-ready {
+      opacity: 0.5;
+    }
+    .mfp-fade.mfp-bg.mfp-removing {
+      opacity: 0;
+    }
+    .mfp-fade.mfp-wrap .mfp-content {
+      opacity: 0;
+      -webkit-transition: all 0.15s linear;
+      -moz-transition: all 0.15s linear;
+      transition: all 0.15s linear;
+    }
+    .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+      opacity: 1;
+    }
+    .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="container-fluid">
+        <h1><img src="assets/logo-white.png" alt="リヒトグラフ" width="350" height="147.69"></h1>
+        <p>
+          <span class="br">リヒトグラフは映像編集の会社です。</span>
+          <span class="br">企業の販促映像やWeb CMなどを作っています。</span>
+          <span class="br">モーショングラフィックスという</span>
+          <span class="br">イラストや文字をアニメーションさせる手法で</span>
+          <span class="br">静止画よりわかりやすくて目にとまる広告を作成しています。</span>
+        </p>
+      </div>
+    </div>
+
+    <div id="video" class="player" data-property="{
+      videoURL    : 'ftpNvujv8NY',
+      containment : 'header',
+      showControls: false,
+      autoPlay    : true,
+      loop        : true,
+      mute        : true,
+      startAt     : 0,
+      opacity     : 1,
+      addRaster   : true,
+      quality     : 'default'
+    }"></div>
+  </header>
+
+  <main>
+    <div class="item item-headline">
+      <div class="item-container">
+        <div class="container-fluid">
+          <h2>WORKS</h2>
+          <p>制作実績</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="https://vimeo.com/album/4594484" class="item item-content" style="background-image: url(https://i.imgur.com/hRYB0d4.jpg);">
+      <div class="item-container">
+        <div class="container-fluid">
+          <h2>株式会社リヒトグラフ・SHOWREEL</h2>
+          <p><span class="br">株式会社リヒトグラフの作品集です。</span>
+            <span class="br">パスワード【showme】</span>
+            <span class="br">こちらの動画に関するお問い合わせは和田まで</span>
+            <span class="br">kw@lichtgraph.net</span>
+          </p>
+          <span class="fa fa-link"></span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=G89hZrl6K-s" class="item item-content popup-iframe" style="background-image: url(https://i.ytimg.com/vi/G89hZrl6K-s/hqdefault.jpg);">
+      <div class="item-container">
+        <div class="container-fluid">
+          <h2>日本生命「みらいのカタチNEW in 1 商品のご説明」</h2>
+          <p>モーショングラフィックス、オフライン編集を担当しました</p>
+          <span class="fa fa-play"></span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=nIlrJ80plKg" class="item item-content popup-iframe" style="background-image: url(https://i.ytimg.com/vi/nIlrJ80plKg/hqdefault.jpg);">
+      <div class="item-container">
+        <div class="container-fluid">
+          <h2>資生堂マキアージュ スキンセンサーベース EX「うるさらレディ」篇</h2>
+          <p>モーショングラフィックス、オフライン編集を担当しました</p>
+          <span class="fa fa-play"></span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=j1DevfHJCSw" class="item item-content popup-iframe" style="background-image: url(https://i.ytimg.com/vi/j1DevfHJCSw/hqdefault.jpg);">
+      <div class="item-container">
+        <div class="container-fluid">
+          <h2>浦沢直樹最新作『あさドラ！』第１集CM／WEB版</h2>
+          <p>モーショングラフィックス、オフライン編集を担当しました</p>
+          <span class="fa fa-play"></span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=GxUl50nTMIw" class="item item-content popup-iframe" style="background-image: url(https://i.ytimg.com/vi/GxUl50nTMIw/hqdefault.jpg);">
+      <div class="item-container">
+        <div class="container-fluid">
+          <h2>HONDA INSIGHT「Believe your INSIGHT.」篇　30秒</h2>
+          <p>オフラインとオンラインの間を手伝わさせていただきました</p>
+          <span class="fa fa-play"></span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=0RSu64RBPqM" class="item item-content popup-iframe" style="background-image: url(https://i.ytimg.com/vi/0RSu64RBPqM/hqdefault.jpg);">
+      <div class="item-container">
+        <div class="container-fluid">
+          <h2>NTTドコモ×SNOW「卒業“盛ルバム”」</h2>
+          <p>モーショングラフィックス、オンライン編集を担当しました。可愛い作品に仕上がっています！</p>
+          <span class="fa fa-play"></span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=b6tINlquCKU" class="item item-content popup-iframe" style="background-image: url(https://i.ytimg.com/vi/b6tINlquCKU/hqdefault.jpg);">
+      <div class="item-container">
+        <div class="container-fluid">
+          <h2>7月29日公開・映画『東京グール』</h2>
+          <p>合成の一部カットを担当させていただきました！お手伝いさせていただいて光栄です！</p>
+          <span class="fa fa-play"></span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=08Eun3iDk-8" class="item item-content popup-iframe" style="background-image: url(https://i.ytimg.com/vi/08Eun3iDk-8/hqdefault.jpg);">
+      <div class="item-container">
+        <div class="container-fluid">
+          <h2>酸欠少女さユり『アノニマス』</h2>
+          <p>歌詞のモーションタイポを担当しました。歌詞の意味合いを踏まえつつ、モーションで微妙なニュアンスを表現しました。文字の動きとレイアウトにこだわった作品です。</p>
+          <span class="fa fa-play"></span>
+        </div>
+      </div>
+    </a>
+
+
+    <div class="item item-headline">
+      <div class="item-container">
+        <div class="container-fluid">
+          <h2>GET IN TOUCH</h2>
+          <p>お問い合わせ</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item item-content" style="background-image: url(assets/bg-getintouch.jpg);">
+      <div class="item-container">
+        <div class="container-fluid">
+          <ul class="list-inline list-getintouch">
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/lichtgraph.net/" class="fa fa-facebook" target="_blank"></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://twitter.com/lichtgraph" class="fa fa-twitter" target="_blank"></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/lichtgraph/" class="fa fa-instagram" target="_blank"></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="mailto:kw@lichtgraph.net?subject=問い合わせ" class="fa fa-envelope-o"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="item item-headline">
+      <div class="item-container">
+        <div class="container-fluid">
+          <h2>ABOUT</h2>
+          <p>会社概要</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item item-content" style="background-image: url(assets/bg-about.jpg);">
+      <div class="item-container">
+        <div class="container-fluid">
+          <table class="table table-about text-xs-left">
+            <tbody>
+              <tr>
+                <th scope="row">社名</th>
+                <td>株式会社リヒトグラフ</td>
+              </tr>
+              <tr>
+                <th scope="row">設立</th>
+                <td>2016年12月</td>
+              </tr>
+              <tr>
+                <th scope="row">代表</th>
+                <td>和田光司</td>
+              </tr>
+              <tr>
+                <th scope="row">住所</th>
+                <td>
+                  <p>150-0031</p>
+                  <p>
+                    東京都渋谷区桜丘町23番17号<br>
+                    シティコート桜丘<br>
+                    <br>
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container-fluid">
+      <p class="copyright">&copy; LICHTGRAPH, Inc.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.0.9/jquery.mb.YTPlayer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#video').YTPlayer();
+      $('.popup-iframe').magnificPopup({
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 200,
+        preloader: false
+      });
+    });
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-17602095-31', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
